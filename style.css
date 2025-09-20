@@ -1,59 +1,87 @@
-/* General Styles */
-body {
+/* Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f9;
+  background: #f4f4f9;
   color: #333;
 }
 
-/* Header */
-header {
+/* Navbar */
+.navbar {
   background: #333;
   color: #fff;
-  padding: 40px 0;
+  padding: 15px 0;
+}
+.nav-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+/* Hero Section */
+.hero {
+  background: #00bcd4;
+  color: #fff;
+  padding: 60px 0;
   text-align: center;
 }
-header h1 {
-  margin: 0;
+.hero h2 {
   font-size: 2.5rem;
 }
-header p {
-  font-size: 1.2rem;
+.hero p {
   margin-top: 10px;
+  font-size: 1.2rem;
 }
 
-/* Container */
+/* Section */
+.section {
+  padding: 40px 0;
+}
 .container {
-  width: 80%;
+  width: 90%;
   margin: auto;
-  padding: 20px 0;
-}
-
-/* Section Titles */
-h2 {
-  color: #444;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 5px;
 }
 
 /* Projects */
 .project-card {
   background: #fff;
-  padding: 15px;
+  padding: 20px;
   margin: 15px 0;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .project-card h3 {
-  margin-top: 0;
+  margin-bottom: 10px;
 }
 
-/* Contact Links */
+/* Contact */
 a {
   color: #0066cc;
-  text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
@@ -66,4 +94,16 @@ footer {
   text-align: center;
   padding: 15px;
   margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
 }
